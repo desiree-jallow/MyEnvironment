@@ -17,7 +17,9 @@ struct SettingsScreen: View {
             Text("Change your theme here")
                 .font(selectedTheme.theme.secondaryFont)
                 .foregroundColor(selectedTheme.theme.accentColor)
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {
+                self.selectedTheme.switchThemes()
+            }, label: {
                 ZStack {
                     Rectangle()
                         .frame(maxHeight: 50)

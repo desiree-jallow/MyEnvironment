@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var selection = 0
     var body: some View {
-        TabView(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/,
+        TabView(selection: $selection,
                 content:  {
                     HomeScreen().tabItem { Text("Home") }.tag(1)
                     SettingsScreen().tabItem { Text("Settings") }.tag(2)
