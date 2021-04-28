@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MyEnvironmentApp: App {
+    static var selectedTheme = SelectedTheme()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(MyEnvironmentApp.selectedTheme)
         }
     }
 }
